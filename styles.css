@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap');
+
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+body{
+    background: #fff;
+    
+}
+.buttons{
+    margin: 50px;
+}
+.buttons button{
+    background: #333;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    border: 0;
+    border-radius: 8px;
+    outline: 0;
+    width: 120px;
+    height: 40px;
+    margin: 4px;
+    cursor: pointer;
+}
+#toast-box{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+}
+.toast{
+    position: relative;
+    width: 400px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: #272727;
+    font-weight: 300;
+    font-size: 18px;
+    padding-left: 12px;
+    margin: 5px ;
+    transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
+}
+.toast::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    animation: anim 5s linear forwards;
+}
+.success{
+    background-color: rgb(47, 158, 47);
+    color: white;
+}
+.success::after{
+    background-color: green;
+}
+.error{
+    color: white;
+    background-color: rgb(235, 67, 67);
+}
+.error::after{
+    background-color: red;
+}
+.invalid{
+    color:white;
+    background-color: rgb(252, 185, 60);
+}
+.invalid::after{
+    background-color: orange;
+}
+@keyframes anim{
+    100%{
+        width: 0;
+    }
+}
+@keyframes moveleft {
+    100%{
+        transform: translateX(0);
+    }
+}
