@@ -1,3 +1,3 @@
 # JavaScript-Practice-Projects
 JavaScript Projects
-Inspired by YouTube video lessons
+--Inspired by YouTube video lessons
